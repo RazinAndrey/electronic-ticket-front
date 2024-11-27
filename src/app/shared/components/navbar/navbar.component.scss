@@ -1,0 +1,37 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .main-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white-color);
+  }
+  .burger-menu-btn {
+    width: max-content;
+    height: max-content;
+  }
+  .navbar-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .navbar-item {
+      font-size: 1.2rem;
+      color: var(--white-color);
+
+      .link {
+        text-decoration: none;
+        color: inherit;
+
+        &.active-link {
+          font-weight: bold;
+          color: var(--green-color);
+        }
+      }
+    }
+  }
+}

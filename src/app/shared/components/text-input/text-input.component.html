@@ -1,0 +1,12 @@
+<label class="control-label">
+  <ng-content></ng-content>
+  <input
+    [type]="type()"
+    [placeholder]="placeholder()"
+    class="control-input"
+    [formControl]="value"
+    (ngModelChange)="onModelChange($event)"
+    (blur)="onTouched()"
+    autocomplete="off"
+  />
+</label>

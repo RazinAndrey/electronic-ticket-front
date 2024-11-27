@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <h1 class="main-title">App</h1>
+
+  <button class="burger-menu-btn" (click)="toggleMenu()">
+    <app-svg-icon icon="menu-burger" className="svg-mini"></app-svg-icon>
+  </button>
+
+  <ul class="navbar-list" [ngClass]="{ 'show-menu': isMenuOpen }">
+    <li class="navbar-item">
+      <a class="link" routerLink="/users" routerLinkActive="active-link">
+        Пользователи
+      </a>
+    </li>
+    <li class="navbar-item">
+      <a class="link" routerLink="/create-user" routerLinkActive="active-link">
+        Создать пользователя
+      </a>
+    </li>
+  </ul>
+</nav>

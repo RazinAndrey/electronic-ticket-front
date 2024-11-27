@@ -1,0 +1,44 @@
+.control-label {
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+
+  color: var(--white-color);
+
+  .control-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--white-color);
+    border-radius: 0.3rem;
+    background: var(--black-color);
+    color: var(--white-color);
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+
+    // &:focus {
+    //   border-color: var(--blue)
+    //   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    //   outline: none;
+    // }
+
+    &:disabled {
+      background-color: #f8f9fa;
+      border-color: #ced4da;
+      color: #6c757d;
+    }
+  }
+}
+
+.text-error {
+  color: red;
+}
+
+.control-input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.control-input.ng-valid.ng-touched {
+  border-color: green;
+}

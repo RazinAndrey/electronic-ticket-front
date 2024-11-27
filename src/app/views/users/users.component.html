@@ -1,0 +1,56 @@
+@for (user of users$ | async; track $index) {
+  <div>
+    <p>{{ user.id }}</p>
+    <p>{{ user.full_name }}</p>
+    <p>{{ user.birth_date }}</p>
+    <p>{{ user.balance }}</p>
+    <p>{{ user.visits_available }}</p>
+    <p>{{ user.visits_quantity }}</p>
+    <p>{{ user.photo }}</p>
+    <button (click)="deleteUser(user.id)">Детальный просмотр</button>
+    <button (click)="deleteUser(user.id)">Удалить</button>
+    <button (click)="updateUser(user)">Редактирование</button>
+  </div>
+}
+
+<form [formGroup]="formUser">
+  <app-text-input type="text" placeholder="ФИО" formControlName="full_name">
+    ФИО
+  </app-text-input>
+
+  <app-text-input
+    type="text"
+    placeholder="Дата рождения"
+    formControlName="birth_date"
+  >
+    Дата рождения
+  </app-text-input>
+
+  <app-text-input
+    type="text"
+    placeholder="Баланс"
+    formControlformControlName="balance"
+  >
+    Баланс
+  </app-text-input>
+
+  <app-text-input
+    type="text"
+    placeholder="Кол-во занятий осталось"
+    formControlName="visits_available"
+  >
+    Кол-во занятий осталось
+  </app-text-input>
+
+  <app-text-input
+    type="text"
+    placeholder="Общее кол-во занятий"
+    formControlName="visits_quantity"
+  >
+    Кол-во занятий осталось
+  </app-text-input>
+
+  <app-file-input formControlName="photo" />
+
+  <button (click)="createUser()">Создать пользователя</button>
+</form>

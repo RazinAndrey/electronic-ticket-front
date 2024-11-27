@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../public/assets/styles/reset.scss';
+@import '../public/assets/styles/fonts.scss';
+
+:root {
+  --dark-color: #1f242d;
+  --white-color: #fff;
+  --green-color: #7cf03d;
+  --red-color: #ff4500;
+  --blue-color: #007bff;
+}
+
+body {
+  background: var(--dark-color);
+  font-family: 'Rubik', sans-serif;
+  padding: 1rem;
+}
